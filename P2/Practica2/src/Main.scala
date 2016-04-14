@@ -41,7 +41,7 @@ object Main {
     */
   def calcularValorTrianguloPascal(columna: Int, fila: Int): Int = {
     if(columna==0 || columna==fila) return 1
-    else return (calcularValorTrianguloPascal(columna - 1, fila - 1) + calcularValorTrianguloPascal(columna-1, fila))
+    else return calcularValorTrianguloPascal(columna - 1, fila - 1) + calcularValorTrianguloPascal(columna, fila-1)
   }
 
   /**
