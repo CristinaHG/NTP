@@ -1,3 +1,5 @@
+import scala.annotation.tailrec
+
 /**
   * Created by cris on 14/04/16.
   */
@@ -47,12 +49,19 @@ object Main {
   /**
     * Ejercicio 2: funcion para chequear el balance de parentesis
     *
-    * //@param cadena cadena a analizar
+    * @param cadena cadena a analizar
     * @return valor booleano con el resultado de la operacion
     */
- // def chequearBalance(cadena: List[Char]): Boolean = {
-    // A rellenar
-  //}
+  def chequearBalance(cadena: List[Char]): Boolean = {
+    @tailrec def balanced(cadena: List[Char], open: Int): Boolean =
+      cadena match {
+        case  Nil => open == 0
+        case '('::p => balanced(cadena.tail, open + 1)
+        case ')'::p => open > 0 && balanced(cadena.tail, open - 1)
+        case   _  => balanced(cadena.tail, open)
+      }
+    balanced(cadena, 0)
+  }
 
   /**
     * Ejercicio 3: funcion para determinar las posibles formas de devolver el
@@ -60,6 +69,7 @@ object Main {
     *
     * // @param cantidad
     * //@param monedas
+    *
     * @return contador de numero de vueltas posibles
     */
  // def contarCambiosPosibles(cantidad: Int, monedas: List[Int]): Int = {
