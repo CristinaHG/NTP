@@ -67,12 +67,15 @@ object Main {
     * Ejercicio 3: funcion para determinar las posibles formas de devolver el
     * cambio de una determinada cantidad con un conjunto de monedas
     *
-    * // @param cantidad
-    * //@param monedas
+    * @param cantidad
+    * @param monedas
     *
     * @return contador de numero de vueltas posibles
     */
- // def contarCambiosPosibles(cantidad: Int, monedas: List[Int]): Int = {
-    // A rellenar
-  //}
+  def contarCambiosPosibles(cantidad: Int, monedas: List[Int]): Int = {
+      if(cantidad ==0 ) return 1
+      if(cantidad <0 ) return 0
+      if(monedas.isEmpty) return 0
+      else return contarCambiosPosibles(cantidad,monedas.tail)+contarCambiosPosibles(cantidad-monedas.head,monedas)
+  }
 }

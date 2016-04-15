@@ -1,5 +1,5 @@
 
-/*
+
 import org.scalatest.FunSuite
 
 import org.junit.runner.RunWith
@@ -28,4 +28,3 @@ class ContarCambiosPosiblesSuite extends FunSuite {
     assert(contarCambiosPosibles(300,List(500,5,50,100,20,200,10)) === 1022)
   }
 }
-*/
