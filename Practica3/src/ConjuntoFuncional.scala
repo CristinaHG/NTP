@@ -18,7 +18,7 @@ object ConjuntoFuncional {
 
   /**
     * Metodo para determinar si un elemento pertenece al conjunto
- *
+    *
     * @param conjunto
     * @param elemento
     * @return
@@ -29,7 +29,7 @@ object ConjuntoFuncional {
   /**
     * Devuelve un conjunto asociado al elemento pasado como
     * argumento
- *
+    *
     * @param elemento
     * @return
     *
@@ -38,7 +38,7 @@ object ConjuntoFuncional {
 
   /**
     * Union de dos conjuntos
- *
+    *
     * @param conjunto1
     * @param conjunto2
     * @return
@@ -47,7 +47,7 @@ object ConjuntoFuncional {
 
   /**
     * Interseccion de dos conjuntos
- *
+    *
     * @param conjunto1
     * @param conjunto2
     * @return
@@ -64,7 +64,7 @@ object ConjuntoFuncional {
     */
   def diferencia(conjunto1: Conjunto, conjunto2: Conjunto): Conjunto =(element:Int)=>contiene(conjunto1,element) && !contiene(conjunto2,element)
 
-  /*
+
   /**
     * Filtrado para obtener el conjunto de los elementos que cumplen
     * el predicado pasado como argumento
@@ -73,74 +73,76 @@ object ConjuntoFuncional {
     * @param p
     * @return
     */
-  def filter(conjunto: Conjunto, p: Int => Boolean): Conjunto =
+  def filter(conjunto: Conjunto, p: Int => Boolean): Conjunto =(element:Int)=>contiene(conjunto,element) && p(element)
 
-  /**
-    * Limite para la iteracion necesaria con paraTodo y existe,
-    * entre -1000 y 1000
-    */
-  private val LIMITE = 1000
 
-  /**
-    * Determina si todos los elementos del conjunto cumplen
-    * la condicion indicada por el predicado
- *
-    * @param conjunto
-    * @param p
-    * @return
-    */
-  def paraTodo(conjunto: Conjunto, p: Int => Boolean): Boolean = {
-    // Funcion auxiliar para iterar sobre los valores desde
-    // -LIMITE a LIMITE
-    def iter(elemento: Int): Boolean = {
-      if (contiene(conjunto,elemento)==False) ???
-      else if (???) ???
-      else iter(???)
+  /*
+    /**
+      * Limite para la iteracion necesaria con paraTodo y existe,
+      * entre -1000 y 1000
+      */
+    private val LIMITE = 1000
+
+    /**
+      * Determina si todos los elementos del conjunto cumplen
+      * la condicion indicada por el predicado
+   *
+      * @param conjunto
+      * @param p
+      * @return
+      */
+    def paraTodo(conjunto: Conjunto, p: Int => Boolean): Boolean = {
+      // Funcion auxiliar para iterar sobre los valores desde
+      // -LIMITE a LIMITE
+      def iter(elemento: Int): Boolean = {
+        if (contiene(conjunto,elemento)==False) ???
+        else if (???) ???
+        else iter(???)
+      }
+
+      iter(???)
     }
 
-    iter(???)
-  }
+    /**
+      * Determina si existe al menos un elemento en el conjunto
+      * que cumple el predicado indicado
+   *
+      * @param conjunto
+      * @param p
+      * @return
+      */
+    def existe(conjunto: Conjunto, p: Int => Boolean): Boolean =
 
-  /**
-    * Determina si existe al menos un elemento en el conjunto
-    * que cumple el predicado indicado
- *
-    * @param conjunto
-    * @param p
-    * @return
-    */
-  def existe(conjunto: Conjunto, p: Int => Boolean): Boolean =
+    /**
+      * Genera un nuevo conjunto transformando los elementos del
+      * conjunto pasado como argumento y aplicando la transformacion
+      * dada por la funcion pasada como segundo argumento
+   *
+      * @param conjunto
+      * @param funcion
+      * @return
+      */
+    def map(conjunto: Conjunto, funcion: Int => Int): Conjunto =
 
-  /**
-    * Genera un nuevo conjunto transformando los elementos del
-    * conjunto pasado como argumento y aplicando la transformacion
-    * dada por la funcion pasada como segundo argumento
- *
-    * @param conjunto
-    * @param funcion
-    * @return
-    */
-  def map(conjunto: Conjunto, funcion: Int => Int): Conjunto =
+    /**
+      * Crea una cadena con el contenido completo del conjunto
+   *
+      * @param conjunto
+      * @return
+      */
+    def toString(conjunto: Conjunto): String = {
+      val elementos = for (
+        i <- -limite to limite if contiene(conjunto, i)) yield i
+      elementos.mkString("{", ",", "}")
+    }
 
-  /**
-    * Crea una cadena con el contenido completo del conjunto
- *
-    * @param conjunto
-    * @return
+    /**
+      * Muestra el contenido completo del conjunto por pantalla
+   *
+      * @param conjunto
+      */
+    def printSet(conjunto: Conjunto) {
+      println(toString(conjunto))
+    }
     */
-  def toString(conjunto: Conjunto): String = {
-    val elementos = for (
-      i <- -limite to limite if contiene(conjunto, i)) yield i
-    elementos.mkString("{", ",", "}")
-  }
-
-  /**
-    * Muestra el contenido completo del conjunto por pantalla
- *
-    * @param conjunto
-    */
-  def printSet(conjunto: Conjunto) {
-    println(toString(conjunto))
-  }
-  */
 }
