@@ -139,7 +139,7 @@ class ConjuntoFuncionalSuite extends FunSuite {
         // Si existe en el conjunto algun elemento menor de 15
         assert(existe(conjunto, x => x < 15))
       }
-/*
+
       /**
         * Test de map
         */
@@ -159,5 +159,5 @@ class ConjuntoFuncionalSuite extends FunSuite {
         // de partida
         assert(!contiene(resultado, 125))
       }
-    */
+
 }

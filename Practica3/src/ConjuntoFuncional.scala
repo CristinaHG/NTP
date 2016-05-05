@@ -134,7 +134,8 @@ object ConjuntoFuncional {
       * @param funcion
       * @return
       */
-    def map(conjunto: Conjunto, funcion: Int => Int): Conjunto =
+    def map(conjunto: Conjunto, funcion: Int => Int): Conjunto =(element:Int)=>existe(conjunto,{(elemento:Int)=>
+      element==funcion(elemento)})
 
     /*
     /**
