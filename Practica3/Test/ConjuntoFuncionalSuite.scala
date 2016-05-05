@@ -113,7 +113,7 @@ class ConjuntoFuncionalSuite extends FunSuite {
       assert(contiene(conjuntoFiltrado, 6))
       assert(!contiene(conjuntoFiltrado, 11))
     }
-  /*
+
       /**
         * Test de forall
         */
@@ -126,7 +126,7 @@ class ConjuntoFuncionalSuite extends FunSuite {
         // Si que todos son menores de 15
         assert(paraTodo(conjunto, x => x < 15))
       }
-
+/*
       /**
         * Test para existe
         */

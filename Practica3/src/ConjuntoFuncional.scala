@@ -1,4 +1,5 @@
 
+
 /**
   * Created by cris on 29/04/16.
   */
@@ -76,7 +77,7 @@ object ConjuntoFuncional {
   def filter(conjunto: Conjunto, p: Int => Boolean): Conjunto =(element:Int)=>contiene(conjunto,element) && p(element)
 
 
-  /*
+
     /**
       * Limite para la iteracion necesaria con paraTodo y existe,
       * entre -1000 y 1000
@@ -95,14 +96,15 @@ object ConjuntoFuncional {
       // Funcion auxiliar para iterar sobre los valores desde
       // -LIMITE a LIMITE
       def iter(elemento: Int): Boolean = {
-        if (contiene(conjunto,elemento)==False) ???
-        else if (???) ???
-        else iter(???)
+        if (elemento>LIMITE) return true
+        else if (contiene(conjunto,elemento) && !contiene((filter(conjunto,p)),elemento)) return false
+        else (iter(elemento+1))
       }
 
-      iter(???)
+      iter(-LIMITE)
     }
 
+  /*
     /**
       * Determina si existe al menos un elemento en el conjunto
       * que cumple el predicado indicado
