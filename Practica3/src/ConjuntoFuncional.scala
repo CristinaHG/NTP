@@ -104,7 +104,7 @@ object ConjuntoFuncional {
       iter(-LIMITE)
     }
 
-  /*
+
     /**
       * Determina si existe al menos un elemento en el conjunto
       * que cumple el predicado indicado
@@ -113,7 +113,17 @@ object ConjuntoFuncional {
       * @param p
       * @return
       */
-    def existe(conjunto: Conjunto, p: Int => Boolean): Boolean =
+    def existe(conjunto: Conjunto, p: Int => Boolean): Boolean ={
+      def iter(elemento: Int): Boolean = {
+        if (elemento>LIMITE) return false
+        else if (contiene(conjunto,elemento) && contiene((filter(conjunto,p)),elemento)) return true
+        else (iter(elemento+1))
+      }
+
+      iter(-LIMITE)
+
+    }
+
 
     /**
       * Genera un nuevo conjunto transformando los elementos del
@@ -126,6 +136,7 @@ object ConjuntoFuncional {
       */
     def map(conjunto: Conjunto, funcion: Int => Int): Conjunto =
 
+    /*
     /**
       * Crea una cadena con el contenido completo del conjunto
    *

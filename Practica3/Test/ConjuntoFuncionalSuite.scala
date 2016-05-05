@@ -126,7 +126,7 @@ class ConjuntoFuncionalSuite extends FunSuite {
         // Si que todos son menores de 15
         assert(paraTodo(conjunto, x => x < 15))
       }
-/*
+
       /**
         * Test para existe
         */
@@ -139,7 +139,7 @@ class ConjuntoFuncionalSuite extends FunSuite {
         // Si existe en el conjunto algun elemento menor de 15
         assert(existe(conjunto, x => x < 15))
       }
-
+/*
       /**
         * Test de map
         */
