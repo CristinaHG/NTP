@@ -137,7 +137,7 @@ object ConjuntoFuncional {
     def map(conjunto: Conjunto, funcion: Int => Int): Conjunto =(element:Int)=>existe(conjunto,{(elemento:Int)=>
       element==funcion(elemento)})
 
-    /*
+
     /**
       * Crea una cadena con el contenido completo del conjunto
    *
@@ -146,7 +146,7 @@ object ConjuntoFuncional {
       */
     def toString(conjunto: Conjunto): String = {
       val elementos = for (
-        i <- -limite to limite if contiene(conjunto, i)) yield i
+        i <- -LIMITE to LIMITE if contiene(conjunto, i)) yield i
       elementos.mkString("{", ",", "}")
     }
 
@@ -158,5 +158,4 @@ object ConjuntoFuncional {
     def printSet(conjunto: Conjunto) {
       println(toString(conjunto))
     }
-    */
 }

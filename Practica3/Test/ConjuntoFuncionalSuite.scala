@@ -17,6 +17,9 @@ class ConjuntoFuncionalSuite extends FunSuite {
     val s1 = conjuntoUnElemento(1)
     val s2 = conjuntoUnElemento(2)
     val s3 = conjuntoUnElemento(3)
+    printSet(s1)
+    printSet(s2)
+    printSet(s3)
   }
 
   /**
@@ -41,7 +44,9 @@ class ConjuntoFuncionalSuite extends FunSuite {
       assert(contiene(s, 1), "fallo: s no contiene a 1")
       assert(contiene(s, 2), "fallo: s no contiene a 2")
       assert(!contiene(s, 3), "fallo: s contiene a 3")
+      printSet(s)
     }
+
   }
 
   /**
@@ -63,6 +68,8 @@ class ConjuntoFuncionalSuite extends FunSuite {
     // 3 y 0 no pertenecen a la union
     assert(!contiene(conjuntoUnion, 3))
     assert(!contiene(conjuntoUnion, 0))
+
+    printSet(conjuntoUnion)
   }
 
   /**
@@ -81,6 +88,8 @@ class ConjuntoFuncionalSuite extends FunSuite {
     // no 4 ni 5 pertenecen
     assert(!contiene(conjuntoInterseccion, 4))
     assert(!contiene(conjuntoInterseccion, 5))
+
+    printSet(conjuntoInterseccion)
   }
 
 
@@ -97,6 +106,8 @@ class ConjuntoFuncionalSuite extends FunSuite {
     // 6 no pertenece y 11 si
     assert(!contiene(conjuntoDiferencia, 6))
     assert(contiene(conjuntoDiferencia, 11))
+
+    printSet(conjuntoDiferencia)
   }
 
     /**
@@ -112,6 +123,8 @@ class ConjuntoFuncionalSuite extends FunSuite {
       // 6 debe pertenecer y 11 no
       assert(contiene(conjuntoFiltrado, 6))
       assert(!contiene(conjuntoFiltrado, 11))
+
+      printSet(conjuntoFiltrado)
     }
 
       /**
@@ -158,6 +171,8 @@ class ConjuntoFuncionalSuite extends FunSuite {
         // 125 no pertenece, porque 100 no esa en el conjunto
         // de partida
         assert(!contiene(resultado, 125))
+
+        printSet(resultado)
       }
 
 }
