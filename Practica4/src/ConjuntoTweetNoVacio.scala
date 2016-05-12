@@ -12,7 +12,10 @@ class ConjuntoTweetNoVacio(raiz: Tweet, izquierda: ConjuntoTweet,
   // quizas algunos de los metodos pedidos se dejen como abstractos y
   // haya que ofrecer las implementaciones aqui
   // -------------------------------------------------------------
-
+  def filtrar0(predicado: Tweet => Boolean, conjunto: ConjuntoTweet): ConjuntoTweet={
+    val conjuntoNuevo=if(predicado(head) && !conjunto.contiene(head)) conjunto.incluir(head) else conjunto
+    derecha.filtrar0(predicado,izquierda.filtrar0(predicado,conjuntoNuevo))
+  }
   // METODOS YA IMPLEMENTADOS: no cambiar
   // -------------------------------------------------------------------------
   /**
