@@ -18,8 +18,21 @@ abstract class ConjuntoTweet {
   // ----------------------- A IMPLEMENTAR -----------------------
   // (o dejar como abstracto para implementar en clases derivadas)
   // -------------------------------------------------------------
+
+  /*
+  caso base:otro vacio=>devolver this
+  inductivo:
+        this no contiene mensaje cabeza de otro => nuevo<-incluir mensaje cabeza en this
+        realizar union de nuevo con resto de mensajes de otro
+
+        en otro caso: this contiene cabeza de otro
+
+         union de this con resto de mensajes de otro
+  */
   def union(otro: ConjuntoTweet): ConjuntoTweet = {
-    val conjuntoNuevo= if(otro.estaVacio) this else this.incluir(otro.head)
+    val conjuntoNuevo=new ConjuntoTweetVacio
+    if(otro.estaVacio) this
+    else if (this.contiene(otro.head)==false) conjuntoNuevo.incluir(otro.head)
     union(otro.tail)
     //return conjuntoNuevo
   }
@@ -29,7 +42,8 @@ abstract class ConjuntoTweet {
   // -------------------------------------------------------------
   def interseccion(otro : ConjuntoTweet) : ConjuntoTweet = {
     val conjuntoNuevo=new ConjuntoTweetVacio
-      if(this.contiene(otro.head)) conjuntoNuevo.incluir(otro.head)
+      if (otro.estaVacio) conjuntoNuevo
+      else if (this.contiene(otro.head)) conjuntoNuevo.incluir(otro.head)
       interseccion(otro.tail)
   }
 
