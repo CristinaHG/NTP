@@ -18,12 +18,20 @@ abstract class ConjuntoTweet {
   // ----------------------- A IMPLEMENTAR -----------------------
   // (o dejar como abstracto para implementar en clases derivadas)
   // -------------------------------------------------------------
-  def union(otro: ConjuntoTweet): ConjuntoTweet = ???
+  def union(otro: ConjuntoTweet): ConjuntoTweet = {
+    val conjuntoNuevo= if(otro.estaVacio) this else this.incluir(otro.head)
+    union(otro.tail)
+    //return conjuntoNuevo
+  }
 
   // ----------------------- A IMPLEMENTAR -----------------------
   // (o dejar como abstracto para implementar en clases derivadas)
   // -------------------------------------------------------------
-  def interseccion(otro : ConjuntoTweet) : ConjuntoTweet = ???
+  def interseccion(otro : ConjuntoTweet) : ConjuntoTweet = {
+    val conjuntoNuevo=new ConjuntoTweetVacio
+      if(this.contiene(otro.head)) conjuntoNuevo.incluir(otro.head)
+      interseccion(otro.tail)
+  }
 
   // ----------------------- A IMPLEMENTAR -----------------------
   // (o dejar como abstracto para implementar en clases derivadas)
