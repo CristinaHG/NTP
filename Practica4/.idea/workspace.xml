@@ -25,8 +25,8 @@
       <file leaf-file-name="ConjuntoTweet.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ConjuntoTweet.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7293355">
-              <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.46191248">
+              <caret line="64" column="71" selection-start-line="64" selection-start-column="71" selection-end-line="64" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -83,8 +83,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/ConjuntoTweetNoVacio.scala" />
-        <option value="$PROJECT_DIR$/src/ConjuntoTweet.scala" />
         <option value="$PROJECT_DIR$/src/ConjuntoTweetVacio.scala" />
+        <option value="$PROJECT_DIR$/src/ConjuntoTweet.scala" />
       </list>
     </option>
   </component>
@@ -816,8 +816,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ConjuntoTweet.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7293355">
-          <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.46191248">
+          <caret line="64" column="71" selection-start-line="64" selection-start-column="71" selection-end-line="64" selection-end-column="71" />
           <folding />
         </state>
       </provider>
