@@ -13,7 +13,7 @@ object TerminosGoogleApple {
 
   // Conjuntos de tweets para ambas listas de terminos
   // ------------------------ A IMPLEMENTAR -------------------------
-  val mensajesGoogle: ConjuntoTweet = ??? 
+  val mensajesGoogle: ConjuntoTweet = LectorTweets.obtenerConjuntoConTerminos()
   val mensajesApple: ConjuntoTweet = ???
 
   // Se genera la lista completa de mensajes de ambos temas
