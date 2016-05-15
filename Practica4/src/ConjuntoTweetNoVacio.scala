@@ -16,6 +16,18 @@ class ConjuntoTweetNoVacio(raiz: Tweet, izquierda: ConjuntoTweet,
     val conjuntoNuevo=if(predicado(head) && !conjunto.contiene(head)) conjunto.incluir(head) else conjunto
     derecha.filtrar0(predicado,izquierda.filtrar0(predicado,conjuntoNuevo))
   }
+
+  def interseccion(otro : ConjuntoTweet) : ConjuntoTweet=otro.filtrar0(tweet=>this.contiene(tweet),this)
+  //if(otro.estaVacio) this
+ // else if(this.contiene(otro.head)){
+   // val conjuntoNuevo=new ConjuntoTweetVacio
+   // conjuntoNuevo.incluir(otro.head)
+    // conjuntoNuevo.union(interseccion(otro.tail))
+  //}
+  //else interseccion(otro.tail)
+
+  def ordenacionAscendentePorRetweet: Tendencia =
+
   // METODOS YA IMPLEMENTADOS: no cambiar
   // -------------------------------------------------------------------------
   /**

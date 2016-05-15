@@ -30,27 +30,33 @@ abstract class ConjuntoTweet {
          union de this con resto de mensajes de otro
   */
   def union(otro: ConjuntoTweet): ConjuntoTweet = {
-    val conjuntoNuevo=new ConjuntoTweetVacio
     if(otro.estaVacio) this
-    else if (this.contiene(otro.head)==false) conjuntoNuevo.incluir(otro.head)
-    union(otro.tail)
+    else if (this.contiene(otro.head)==false) {
+      val conjuntoNuevo = this.incluir(otro.head)
+      conjuntoNuevo.union(otro.tail)
+    }else
+      union(otro.tail)
     //return conjuntoNuevo
   }
 
   // ----------------------- A IMPLEMENTAR -----------------------
   // (o dejar como abstracto para implementar en clases derivadas)
   // -------------------------------------------------------------
-  def interseccion(otro : ConjuntoTweet) : ConjuntoTweet = {
-    val conjuntoNuevo=new ConjuntoTweetVacio
-      if (otro.estaVacio) conjuntoNuevo
-      else if (this.contiene(otro.head)) conjuntoNuevo.incluir(otro.head)
-      interseccion(otro.tail)
-  }
+  def interseccion(otro : ConjuntoTweet) : ConjuntoTweet
 
   // ----------------------- A IMPLEMENTAR -----------------------
   // (o dejar como abstracto para implementar en clases derivadas)
   // -------------------------------------------------------------
-  def ordenacionAscendentePorRetweet: Tendencia = ??? 
+  def ordenacionAscendentePorRetweet: Tendencia = ordenacionAscendentePorRetweet0(buscarMinimo,this.eliminar(buscarMinimo),new TendenciaVacia)
+
+
+  def ordenacionAscendentePorRetweet0(minimo:Tweet,conjunto:ConjuntoTweet,tendencia: Tendencia):Tendencia={
+    if(conjunto.estaVacio) tendencia
+    else{
+      val minimoretwiteado=conjunto.buscarMinimo
+      ordenacionAscendentePorRetweet0(minimoretwiteado,conjunto.eliminar(minimoretwiteado),tendencia.+(minimoretwiteado))
+    }
+  }
 
 
   // ----------------------- A IMPLEMENTAR -----------------------

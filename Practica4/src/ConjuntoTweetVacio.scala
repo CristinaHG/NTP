@@ -10,6 +10,15 @@ class ConjuntoTweetVacio extends ConjuntoTweet {
   def filtrar0(predicado: Tweet => Boolean, conjunto: ConjuntoTweet): ConjuntoTweet={
     return conjunto
   }
+  /**
+    * Metodo para incluir un mensaje en el conjunto
+    *
+    * @param otro
+    * @return
+    */
+  def interseccion(otro : ConjuntoTweet) : ConjuntoTweet =  new ConjuntoTweetVacio
+
+
   // METODOS YA IMPLEMENTADOS QUE NO ES NECESARIO CAMBIAR
   // -------------------------------------------------------------------------
   /**
