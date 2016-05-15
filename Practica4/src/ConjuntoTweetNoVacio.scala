@@ -26,7 +26,7 @@ class ConjuntoTweetNoVacio(raiz: Tweet, izquierda: ConjuntoTweet,
   //}
   //else interseccion(otro.tail)
 
-  def ordenacionAscendentePorRetweet: Tendencia =
+
 
   // METODOS YA IMPLEMENTADOS: no cambiar
   // -------------------------------------------------------------------------

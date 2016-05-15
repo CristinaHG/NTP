@@ -27,9 +27,13 @@ object Main extends App {
   // ------------------------ A IMPLEMENTAR -------------------------
   // A obtener informacion sobre: 
   // 1. numero de mensajes en mensajesGoogle y mensajesApple
+  printf("terminos Google:%s", TerminosGoogleApple.mensajesGoogle.numeroMensajes )
+  printf("%n terminos Apple:%s", TerminosGoogleApple.mensajesApple.numeroMensajes)
   // 2. numero de mensajes en la tendencia
   // 3. numero de mensajes comunes
   // 4. orden de influencia de los mensajes comunes
   // 5. maximo y minimo numero de retweets en los mensajes comunes
   // 6. maximo y minimo de retweets en toda la coleccion de tendencia
+
+
 }
