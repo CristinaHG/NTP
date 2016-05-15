@@ -62,21 +62,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="78" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
+            <state vertical-scroll-proportion="0.36466774">
+              <caret line="15" column="84" selection-start-line="15" selection-start-column="84" selection-end-line="15" selection-end-column="84" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LectorTweets.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LectorTweets.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LectorTweets.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.78119934">
-              <caret line="156" column="83" selection-start-line="156" selection-start-column="83" selection-end-line="156" selection-end-column="83" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="157" column="3" selection-start-line="157" selection-start-column="3" selection-end-line="157" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -116,8 +116,8 @@
         <option value="$PROJECT_DIR$/src/ConjuntoTweetVacio.scala" />
         <option value="$PROJECT_DIR$/src/ConjuntoTweet.scala" />
         <option value="$PROJECT_DIR$/src/Tendencia.scala" />
-        <option value="$PROJECT_DIR$/src/Main.scala" />
         <option value="$PROJECT_DIR$/src/LectorTweets.scala" />
+        <option value="$PROJECT_DIR$/src/Main.scala" />
       </list>
     </option>
   </component>
@@ -849,14 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="78" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ConjuntoTweetVacio.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -891,8 +883,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LectorTweets.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78119934">
-          <caret line="156" column="83" selection-start-line="156" selection-start-column="83" selection-end-line="156" selection-end-column="83" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="157" column="3" selection-start-line="157" selection-start-column="3" selection-end-line="157" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36466774">
+          <caret line="15" column="84" selection-start-line="15" selection-start-column="84" selection-end-line="15" selection-end-column="84" />
           <folding />
         </state>
       </provider>
