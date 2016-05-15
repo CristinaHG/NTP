@@ -17,7 +17,7 @@ object TerminosGoogleApple {
   val mensajesApple: ConjuntoTweet = LectorTweets.obtenerConjuntoConTerminos(apple)
 
   // Se genera la lista completa de mensajes de ambos temas
-  val tendencia: Tendencia = ??? 
+  val tendencia: Tendencia = mensajesGoogle.union(mensajesApple).ordenacionAscendentePorRetweet
 }
 
 /**
