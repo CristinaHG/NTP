@@ -36,7 +36,7 @@ object Main extends App {
   printf("%n número de mensajes en la tendencia:%s", terminosGA.tendencia.length)
   // 3. numero de mensajes comunes
   val comunes=terminosGA.mensajesApple.interseccion(terminosGA.mensajesGoogle)
-  printf("%n número de mensajes comunes:%s",comunes.numeroMensajes)
+  printf("%n número de mensajes comunes:%s%n",comunes.numeroMensajes)
   // 4. orden de influencia de los mensajes comunes
   printf("%n orden de influencia de mensajes comunes:%s",comunes.ordenacionAscendentePorRetweet.foreach((t:Tweet)=>print(t)))
   // 5. maximo y minimo numero de retweets en los mensajes comunes
