@@ -49,4 +49,6 @@ class TendenciaNoVacia(mensajeInicial: Tweet, resto: Tendencia) extends Tendenci
     */
   override def toString =
     "TendenciaNoVacia(" + mensajeInicial.retweets + ", " + resto + ")"
+
+  def getLast:Tweet= if(this.length==1) this.head else this.tail.getLast
 }

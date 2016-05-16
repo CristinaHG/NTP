@@ -64,7 +64,9 @@ abstract class ConjuntoTweet {
   // -------------------------------------------------------------
   def numeroMensajes: Integer = if (this.estaVacio) 0 else 1+this.tail.numeroMensajes
 
-  // METODOS YA IMPLEMENTADOS QUE NO ES NECESARIO CAMBIAR (desde aqui al final
+
+
+// METODOS YA IMPLEMENTADOS QUE NO ES NECESARIO CAMBIAR (desde aqui al final
   // de la descripcion de la clase)
   // -------------------------------------------------------------------------
   /**
@@ -158,5 +160,28 @@ abstract class ConjuntoTweet {
     else if (this.head.retweets < minimoActual.retweets) this.tail.buscarMinimo0(this.head)
     // en caso contrario sigue la busqueda sobre el resto de elementos
     else this.tail.buscarMinimo0(minimoActual)
-}
 
+
+
+def buscarMaximo: Tweet =
+// Se inicia la busqueda con el primer mensaje
+  this.tail.buscarMaximo0(this.head)
+
+/**
+  * Funcion auxiliar para busqueda de mensaje con menor numero
+  * de retweets
+  *
+  * @param maximoActual
+  * @return
+  */
+private def buscarMaximo0(maximoActual: Tweet): Tweet =
+// Si la lista esta vacia, se devuelve el minimo actual
+  if (this.estaVacio) maximoActual
+  // en caso contrario, se comprueba si el primer mensaje en
+  // el conjunto es menor que el minimo actual, se actualiza el
+  // minimo y la busqueda prosigue con el
+  else if (this.head.retweets > maximoActual.retweets) this.tail.buscarMaximo0(this.head)
+  // en caso contrario sigue la busqueda sobre el resto de elementos
+  else this.tail.buscarMaximo0(maximoActual)
+
+}

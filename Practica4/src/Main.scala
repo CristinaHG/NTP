@@ -27,13 +27,22 @@ object Main extends App {
   // ------------------------ A IMPLEMENTAR -------------------------
   // A obtener informacion sobre: 
   // 1. numero de mensajes en mensajesGoogle y mensajesApple
-  printf("terminos Google:%s", TerminosGoogleApple.mensajesGoogle.numeroMensajes )
-  printf("%n terminos Apple:%s", TerminosGoogleApple.mensajesApple.numeroMensajes)
+  val terminosGA=TerminosGoogleApple
+  printf("terminos Google:%s", terminosGA.mensajesGoogle.numeroMensajes )
+  printf("%n terminos Apple:%s", terminosGA.mensajesApple.numeroMensajes)
   // 2. numero de mensajes en la tendencia
+  printf("%n número de mensajes en la tendencia:%s", terminosGA.tendencia.length)
   // 3. numero de mensajes comunes
+  val comunes=terminosGA.mensajesApple.interseccion(terminosGA.mensajesGoogle)
+  printf("%n número de mensajes comunes:%s",comunes.numeroMensajes)
   // 4. orden de influencia de los mensajes comunes
+  printf("%n orden de influencia de mensajes comunes:%s",comunes.ordenacionAscendentePorRetweet.foreach((t:Tweet)=>print(t)))
   // 5. maximo y minimo numero de retweets en los mensajes comunes
+  printf("%n minimo nº de RTs en mensajes comunes:%s",comunes.ordenacionAscendentePorRetweet.head.retweets)
+  printf("%n maximo nº de RTs en mensajes comunes:%s",comunes.buscarMaximo.retweets)
   // 6. maximo y minimo de retweets en toda la coleccion de tendencia
+  printf("%n minimo nº de RTs en toda la tendencia:%s",terminosGA.tendencia.head.retweets)
+  printf("%n maximo nº de RTs en toda la tendencia:%s",terminosGA.tendencia.getLast.retweets)
 
-
+  //printf("%ntweets en tendencia:%s",terminosGA.tendencia.foreach((t:Tweet)=>print(t)))
 }

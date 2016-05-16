@@ -44,4 +44,6 @@ class TendenciaVacia extends Tendencia {
     * @return
     */
   override def toString = "TendenciaVacia"
+
+  def getLast:Tweet= new Tweet(null,null,0)
 }

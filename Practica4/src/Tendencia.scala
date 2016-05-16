@@ -52,4 +52,6 @@ abstract class Tendencia {
     * @return
     */
   def length : Integer = if (this.isEmpty) 0 else 1+this.tail.length
+
+  def getLast:Tweet
 }
