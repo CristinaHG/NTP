@@ -52,6 +52,10 @@ abstract class Tendencia {
     * @return
     */
   def length : Integer = if (this.isEmpty) 0 else 1+this.tail.length
-
+  /**
+    *devuelve el último tweet de la tendencia.
+    * Método abstracto mplementado en las clases derivadas
+    * @return
+    */
   def getLast:Tweet
 }

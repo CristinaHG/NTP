@@ -161,25 +161,30 @@ abstract class ConjuntoTweet {
     // en caso contrario sigue la busqueda sobre el resto de elementos
     else this.tail.buscarMinimo0(minimoActual)
 
-
+  /**
+    * Busca el Tweet con mayor nº de RTs del conjunto.
+    * es la complementaria de la función buscarMinimo
+    *
+    * @return
+    */
 
 def buscarMaximo: Tweet =
 // Se inicia la busqueda con el primer mensaje
   this.tail.buscarMaximo0(this.head)
 
 /**
-  * Funcion auxiliar para busqueda de mensaje con menor numero
-  * de retweets
+  * Funcion auxiliar para busqueda de mensaje con mayor numero
+  * de retweets. Basada en la función buscarMinimo0 proporcionada
   *
   * @param maximoActual
   * @return
   */
 private def buscarMaximo0(maximoActual: Tweet): Tweet =
-// Si la lista esta vacia, se devuelve el minimo actual
+// Si la lista esta vacia, se devuelve el maximo actual
   if (this.estaVacio) maximoActual
   // en caso contrario, se comprueba si el primer mensaje en
-  // el conjunto es menor que el minimo actual, se actualiza el
-  // minimo y la busqueda prosigue con el
+  // el conjunto es mayor que el maximo actual, se actualiza el
+  // maximo y la busqueda prosigue con el
   else if (this.head.retweets > maximoActual.retweets) this.tail.buscarMaximo0(this.head)
   // en caso contrario sigue la busqueda sobre el resto de elementos
   else this.tail.buscarMaximo0(maximoActual)

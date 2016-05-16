@@ -17,7 +17,7 @@ class ConjuntoTweetNoVacio(raiz: Tweet, izquierda: ConjuntoTweet,
     derecha.filtrar0(predicado,izquierda.filtrar0(predicado,conjuntoNuevo))
   }
 
-  def interseccion(otro : ConjuntoTweet) : ConjuntoTweet=otro.filtrar0(tweet=>this.contiene(tweet),this)
+  def interseccion(otro : ConjuntoTweet) : ConjuntoTweet=filtrar0(tweet=>otro.contiene(tweet),new ConjuntoTweetVacio)
   //if(otro.estaVacio) this
  // else if(this.contiene(otro.head)){
    // val conjuntoNuevo=new ConjuntoTweetVacio

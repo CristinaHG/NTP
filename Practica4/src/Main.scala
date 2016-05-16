@@ -28,6 +28,8 @@ object Main extends App {
   // A obtener informacion sobre: 
   // 1. numero de mensajes en mensajesGoogle y mensajesApple
   val terminosGA=TerminosGoogleApple
+  //printf("MENSAJES Google:%s", terminosGA.mensajesGoogle.foreach((t:Tweet)=>print(t)))
+  //printf("MENSAJES Apple:%s", terminosGA.mensajesApple.foreach((t:Tweet)=>print(t)))
   printf("terminos Google:%s", terminosGA.mensajesGoogle.numeroMensajes )
   printf("%n terminos Apple:%s", terminosGA.mensajesApple.numeroMensajes)
   // 2. numero de mensajes en la tendencia
@@ -42,7 +44,7 @@ object Main extends App {
   printf("%n maximo nº de RTs en mensajes comunes:%s",comunes.buscarMaximo.retweets)
   // 6. maximo y minimo de retweets en toda la coleccion de tendencia
   printf("%n minimo nº de RTs en toda la tendencia:%s",terminosGA.tendencia.head.retweets)
+  //como la tendencia está ordenada, sabemos que el mas RT estará al final del conjunto
   printf("%n maximo nº de RTs en toda la tendencia:%s",terminosGA.tendencia.getLast.retweets)
-
   //printf("%ntweets en tendencia:%s",terminosGA.tendencia.foreach((t:Tweet)=>print(t)))
 }
