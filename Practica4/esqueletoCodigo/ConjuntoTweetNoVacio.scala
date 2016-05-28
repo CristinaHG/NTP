@@ -12,21 +12,6 @@ class ConjuntoTweetNoVacio(raiz: Tweet, izquierda: ConjuntoTweet,
   // quizas algunos de los metodos pedidos se dejen como abstractos y
   // haya que ofrecer las implementaciones aqui
   // -------------------------------------------------------------
- override def filtrar0(predicado: Tweet => Boolean, conjunto: ConjuntoTweet): ConjuntoTweet={
-    val conjuntoNuevo=if(predicado(raiz) && !conjunto.contiene(raiz)) conjunto.incluir(raiz) else conjunto
-    derecha.filtrar0(predicado,izquierda.filtrar0(predicado,conjuntoNuevo))
-  }
-
-  def interseccion(otro : ConjuntoTweet) : ConjuntoTweet=filtrar0(tweet=>otro.contiene(tweet),new ConjuntoTweetVacio)
-  //if(otro.estaVacio) this
- // else if(this.contiene(otro.head)){
-   // val conjuntoNuevo=new ConjuntoTweetVacio
-   // conjuntoNuevo.incluir(otro.head)
-    // conjuntoNuevo.union(interseccion(otro.tail))
-  //}
-  //else interseccion(otro.tail)
-
-
 
   // METODOS YA IMPLEMENTADOS: no cambiar
   // -------------------------------------------------------------------------
@@ -92,7 +77,4 @@ class ConjuntoTweetNoVacio(raiz: Tweet, izquierda: ConjuntoTweet,
     if (mensaje.texto < raiz.texto) new ConjuntoTweetNoVacio(raiz, izquierda.eliminar(mensaje), derecha)
     else if (raiz.texto < mensaje.texto) new ConjuntoTweetNoVacio(raiz, izquierda, derecha.eliminar(mensaje))
     else izquierda.union(derecha)
-
-  // ----------------------- A IMPLEMENTAR -----------------------
 }
-

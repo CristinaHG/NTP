@@ -2,70 +2,42 @@
 /**
   * Clase abstracta para representar conjuntos de tweets
   */
-
 abstract class ConjuntoTweet {
 
   // ----------------------- A IMPLEMENTAR -----------------------
   // (haciendo uso del auxiliar)
   // -------------------------------------------------------------
-  def filtrar(predicado: Tweet => Boolean): ConjuntoTweet = filtrar0(predicado, new ConjuntoTweetVacio)
+  def filtrar(predicado: Tweet => Boolean): ConjuntoTweet = ???
 
 
   // ----------------------- A IMPLEMENTAR -----------------------
   // (o dejar como abstracto para implementar en clases derivadas)
   // -------------------------------------------------------------
-  def filtrar0(predicado: Tweet => Boolean, conjunto: ConjuntoTweet): ConjuntoTweet
+  def filtrar0(predicado: Tweet => Boolean, conjunto: ConjuntoTweet): ConjuntoTweet = ???
+
+  
   // ----------------------- A IMPLEMENTAR -----------------------
   // (o dejar como abstracto para implementar en clases derivadas)
   // -------------------------------------------------------------
-
-  /*
-  caso base:otro vacio=>devolver this
-  inductivo:
-        this no contiene mensaje cabeza de otro => nuevo<-incluir mensaje cabeza en this
-        realizar union de nuevo con resto de mensajes de otro
-
-        en otro caso: this contiene cabeza de otro
-
-         union de this con resto de mensajes de otro
-  */
-  def union(otro: ConjuntoTweet): ConjuntoTweet = {
-    if(otro.estaVacio) this
-    else if (this.contiene(otro.head)==false) {
-      val conjuntoNuevo = this.incluir(otro.head)
-      conjuntoNuevo.union(otro.tail)
-    }else this.union(otro.tail)
-    //return conjuntoNuevo
-  }
+  def union(otro: ConjuntoTweet): ConjuntoTweet = ???
 
   // ----------------------- A IMPLEMENTAR -----------------------
   // (o dejar como abstracto para implementar en clases derivadas)
   // -------------------------------------------------------------
-  def interseccion(otro : ConjuntoTweet) : ConjuntoTweet
+  def interseccion(otro : ConjuntoTweet) : ConjuntoTweet = ???
 
   // ----------------------- A IMPLEMENTAR -----------------------
   // (o dejar como abstracto para implementar en clases derivadas)
   // -------------------------------------------------------------
-  def ordenacionAscendentePorRetweet: Tendencia = ordenacionAscendentePorRetweet0(buscarMinimo,this.eliminar(buscarMinimo),new TendenciaVacia)
-
-  def ordenacionAscendentePorRetweet0(minimo:Tweet,conjunto:ConjuntoTweet,tendencia: Tendencia):Tendencia={
-    if(conjunto.estaVacio) tendencia
-    else{
-      val minimoretwiteado=conjunto.buscarMinimo
-      ordenacionAscendentePorRetweet0(minimoretwiteado,conjunto.eliminar(minimoretwiteado),tendencia.+(minimoretwiteado))
-    }
-
-  }
+  def ordenacionAscendentePorRetweet: Tendencia = ??? 
 
 
   // ----------------------- A IMPLEMENTAR -----------------------
   // (o dejar como abstracto para implementar en clases derivadas)
   // -------------------------------------------------------------
-  def numeroMensajes: Integer = if (this.estaVacio) 0 else this.tail.numeroMensajes+1
+  def numeroMensajes: Integer = ???
 
-
-
-// METODOS YA IMPLEMENTADOS QUE NO ES NECESARIO CAMBIAR (desde aqui al final
+  // METODOS YA IMPLEMENTADOS QUE NO ES NECESARIO CAMBIAR (desde aqui al final
   // de la descripcion de la clase)
   // -------------------------------------------------------------------------
   /**
@@ -159,33 +131,5 @@ abstract class ConjuntoTweet {
     else if (this.head.retweets < minimoActual.retweets) this.tail.buscarMinimo0(this.head)
     // en caso contrario sigue la busqueda sobre el resto de elementos
     else this.tail.buscarMinimo0(minimoActual)
-
-  /**
-    * Busca el Tweet con mayor nº de RTs del conjunto.
-    * es la complementaria de la función buscarMinimo
-    *
-    * @return
-    */
-
-def buscarMaximo: Tweet =
-// Se inicia la busqueda con el primer mensaje
-  this.tail.buscarMaximo0(this.head)
-
-/**
-  * Funcion auxiliar para busqueda de mensaje con mayor numero
-  * de retweets. Basada en la función buscarMinimo0 proporcionada
-  *
-  * @param maximoActual
-  * @return
-  */
-private def buscarMaximo0(maximoActual: Tweet): Tweet =
-// Si la lista esta vacia, se devuelve el maximo actual
-  if (this.estaVacio) maximoActual
-  // en caso contrario, se comprueba si el primer mensaje en
-  // el conjunto es mayor que el maximo actual, se actualiza el
-  // maximo y la busqueda prosigue con el
-  else if (this.head.retweets > maximoActual.retweets) this.tail.buscarMaximo0(this.head)
-  // en caso contrario sigue la busqueda sobre el resto de elementos
-  else this.tail.buscarMaximo0(maximoActual)
-
 }
+

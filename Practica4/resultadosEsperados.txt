@@ -1,0 +1,43 @@
+Mensajes en tendencia: 
+179
+Mensajes en coleccion de google: 38
+Mensajes en coleccion de apple: 150
+Mensajes comunes: 9
+User: CNET
+Text: Camera contest:  Apple iPhone 5 vs. Samsung Galaxy S3 vs. HTC One X http://t.co/PmbhNgrd [49]
+User: gadgetlab
+Text: First iPhone 5 Benchmarks: Screaming Fast, Yes, But Just Shy of Galaxy S III  http://t.co/QIAhda3L by @redgirlsays [79]
+User: CNET
+Text: How to make your Android phone look like an iPhone 5 http://t.co/tZZYb8Ti [39]
+User: CNET
+Text: How to switch from iPhone to Android http://t.co/M8I9lwua [131]
+User: CNET
+Text: If you watch television regularly, second-screen app Zeebox for Android &amp; iOS makes an excellent companion http://t.co/buVYA8E7 [15]
+User: mashable
+Text: Smartphone Camera Shootout: iPhone 5 vs. Galaxy SIII vs. iPhone 4S http://t.co/Qp0PM0fh [85]
+User: TechCrunch
+Text: Soon-To-Be-Acquired BlueSprig's AirCover Family Locator Is An iOS/Android App That Lets You Track ... http://t.co/qSQquuLS by @ingridlunden [24]
+User: mashable
+Text: Watch These Epic #iPhone 5 Vs. #Android Music Videos http://t.co/Sf0De6de [49]
+User: gizmodo
+Text: iPhone 5 vs Galaxy S III: Who's screen is prettier? http://t.co/n6CbaspY [108]
+Ordenados por relevancia ---------------------------------- 
+User: CNET
+Text: If you watch television regularly, second-screen app Zeebox for Android &amp; iOS makes an excellent companion http://t.co/buVYA8E7 [15]
+User: TechCrunch
+Text: Soon-To-Be-Acquired BlueSprig's AirCover Family Locator Is An iOS/Android App That Lets You Track ... http://t.co/qSQquuLS by @ingridlunden [24]
+User: CNET
+Text: How to make your Android phone look like an iPhone 5 http://t.co/tZZYb8Ti [39]
+User: CNET
+Text: Camera contest:  Apple iPhone 5 vs. Samsung Galaxy S3 vs. HTC One X http://t.co/PmbhNgrd [49]
+User: mashable
+Text: Watch These Epic #iPhone 5 Vs. #Android Music Videos http://t.co/Sf0De6de [49]
+User: gadgetlab
+Text: First iPhone 5 Benchmarks: Screaming Fast, Yes, But Just Shy of Galaxy S III  http://t.co/QIAhda3L by @redgirlsays [79]
+User: mashable
+Text: Smartphone Camera Shootout: iPhone 5 vs. Galaxy SIII vs. iPhone 4S http://t.co/Qp0PM0fh [85]
+User: gizmodo
+Text: iPhone 5 vs Galaxy S III: Who's screen is prettier? http://t.co/n6CbaspY [108]
+User: CNET
+Text: How to switch from iPhone to Android http://t.co/M8I9lwua [131]
+
